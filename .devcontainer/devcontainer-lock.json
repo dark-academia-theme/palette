@@ -1,0 +1,9 @@
+{
+  "features": {
+    "ghcr.io/jonathan-tyler/containers/nonroot-user:0.1.2": {
+      "version": "0.1.2",
+      "resolved": "ghcr.io/jonathan-tyler/containers/nonroot-user@sha256:12aaf5ff61efb764f97e896496f23f7a321bbb1a02875ad4de36f34e80f36a88",
+      "integrity": "sha256:12aaf5ff61efb764f97e896496f23f7a321bbb1a02875ad4de36f34e80f36a88"
+    }
+  }
+}

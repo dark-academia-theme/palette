@@ -1,7 +1,15 @@
 {
   "name": "dark-academia-theme-palette",
   "image": "registry.access.redhat.com/hi/core-runtime@sha256:d939459917ebea5ea4f31187050959ad5cc833c6554b54080ebafd0c4142212c",
+  "features": {
+    "ghcr.io/jonathan-tyler/containers/nonroot-user:0.1.2": {}
+  },
+  "containerUser": "nonroot",
+  "remoteUser": "nonroot",
   "updateRemoteUserUID": true,
+  "containerEnv": {
+    "HOME": "/home/nonroot"
+  },
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind"
 }
