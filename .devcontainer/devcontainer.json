@@ -1,0 +1,7 @@
+{
+  "name": "dark-academia-theme-palette",
+  "image": "registry.access.redhat.com/hi/core-runtime@sha256:d939459917ebea5ea4f31187050959ad5cc833c6554b54080ebafd0c4142212c",
+  "updateRemoteUserUID": true,
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind"
+}
