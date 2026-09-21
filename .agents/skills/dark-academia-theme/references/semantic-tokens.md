@@ -28,6 +28,72 @@ description. Unsupported semantic aliases resolve through their canonical
 new portable meanings or treat ANSI compatibility names as literal hue
 requirements.
 
+When an adapter cannot express a more specific role, use these approved
+fallback edges. These are adapter-collapse rules, not replacements for the
+canonical values or aliases in the DTCG source:
+
+```text
+surface.secondary -> surface.working
+surface.raised -> surface.secondary
+surface.active -> surface.raised
+surface.organizational -> surface.secondary
+surface.organizational.raised -> surface.organizational
+surface.organizational.active -> surface.organizational.raised
+surface.rail -> surface.working
+surface.control -> surface.working
+
+content.secondary -> content.primary
+content.muted -> content.secondary
+content.status -> content.secondary
+content.inverse -> content.primary
+content.label -> content.primary
+content.navigation -> content.primary
+content.marker -> content.secondary
+content.symbol -> content.secondary
+
+state.diff.added -> state.success
+state.diff.changed -> state.warning
+state.diff.removed -> state.error
+state.permission.read -> content.secondary
+state.permission.write -> content.secondary
+state.permission.execute -> content.secondary
+state.permission.missing -> content.muted
+
+interaction.search.current -> interaction.search.match
+interaction.key -> interaction.action.marked
+interaction.cursor -> content.primary
+
+border.window.active -> border.window.inactive
+border.component -> border.window.inactive
+border.component.active -> border.component
+
+syntax.character -> syntax.string
+syntax.float -> syntax.number
+syntax.boolean -> syntax.constant
+syntax.schema -> syntax.type
+syntax.keyword.declaration -> syntax.keyword
+syntax.keyword.control -> syntax.keyword
+syntax.directive -> syntax.keyword
+syntax.variable.builtin -> syntax.variable
+syntax.parameter -> syntax.variable
+syntax.property -> syntax.variable
+syntax.field -> syntax.property
+syntax.function.builtin -> syntax.function
+syntax.function.call -> syntax.function
+syntax.method -> syntax.function
+syntax.constructor -> syntax.type
+syntax.type.builtin -> syntax.type
+syntax.type.qualifier -> syntax.type
+syntax.attribute -> syntax.type
+syntax.namespace -> syntax.type
+syntax.constant.builtin -> syntax.constant
+syntax.string.escape -> syntax.string
+syntax.string.regex -> syntax.string
+syntax.tag -> syntax.property
+syntax.tag.attribute -> syntax.attribute
+syntax.tag.delimiter -> syntax.punctuation
+```
+
 Application widget names, local theme keys, rendering channels, opacity,
 textures, typography, and exact icon glyphs remain adapter or renderer concerns.
 A low-contrast fill or border must not be the sole cue for an essential active,
