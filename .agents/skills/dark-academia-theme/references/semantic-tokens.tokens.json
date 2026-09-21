@@ -1,0 +1,398 @@
+{
+  "surface": {
+    "$type": "color",
+    "working": {
+      "$value": { "colorSpace": "srgb", "components": [0.03137255, 0.03137255, 0.03137255], "alpha": 1, "hex": "#080808" },
+      "$description": "Syntax-bearing content, desktop gaps, and explicitly neutral working canvases."
+    },
+    "secondary": {
+      "$value": { "colorSpace": "srgb", "components": [0.07058824, 0.08627451, 0.07058824], "alpha": 1, "hex": "#121612" },
+      "$description": "Dark-green secondary non-syntax surface."
+    },
+    "raised": {
+      "$value": { "colorSpace": "srgb", "components": [0.10980392, 0.13333333, 0.10980392], "alpha": 1, "hex": "#1C221C" },
+      "$description": "Lighter-green raised non-syntax surface."
+    },
+    "active": {
+      "$value": { "colorSpace": "srgb", "components": [0.14509804, 0.17647059, 0.14509804], "alpha": 1, "hex": "#252D25" },
+      "$description": "Active step in the general green surface ladder."
+    },
+    "organizational": {
+      "$root": {
+        "$value": "{surface.secondary}",
+        "$description": "Bounded organizational or panel surface."
+      },
+      "raised": {
+        "$value": "{surface.raised}",
+        "$description": "Raised step within an organizational region."
+      },
+      "active": {
+        "$value": "{surface.active}",
+        "$description": "Active step within an organizational region."
+      }
+    },
+    "rail": {
+      "$value": { "colorSpace": "srgb", "components": [0.09803922, 0.07843137, 0.0627451], "alpha": 1, "hex": "#191410" },
+      "$description": "Narrow horizontal structural rail."
+    },
+    "control": {
+      "$value": { "colorSpace": "srgb", "components": [0.09803922, 0.07843137, 0.0627451], "alpha": 1, "hex": "#191410" },
+      "$description": "Bounded composer, input, action, or permission control surface."
+    }
+  },
+  "content": {
+    "$type": "color",
+    "primary": {
+      "$value": { "colorSpace": "srgb", "components": [0.86666667, 0.84313725, 0.79215686], "alpha": 1, "hex": "#DDD7CA" },
+      "$description": "Primary prose, labels, glyphs, or equivalent rendered content."
+    },
+    "secondary": {
+      "$value": { "colorSpace": "srgb", "components": [0.76078431, 0.72156863, 0.64313725], "alpha": 1, "hex": "#C2B8A4" },
+      "$description": "Secondary prose, labels, glyphs, or equivalent rendered content."
+    },
+    "muted": {
+      "$value": { "colorSpace": "srgb", "components": [0.59215686, 0.59215686, 0.59215686], "alpha": 1, "hex": "#979797" },
+      "$description": "De-emphasized explanatory or contextual content.",
+      "$extensions": {
+        "org.dark-academia-theme.adapterPreferences": {
+          "bySurface": {
+            "surface.working": { "colorSpace": "srgb", "components": [0.47058824, 0.47058824, 0.47058824], "alpha": 1, "hex": "#787878" },
+            "surface.secondary": { "colorSpace": "srgb", "components": [0.49411765, 0.49411765, 0.49411765], "alpha": 1, "hex": "#7E7E7E" },
+            "surface.rail": { "colorSpace": "srgb", "components": [0.49411765, 0.49411765, 0.49411765], "alpha": 1, "hex": "#7E7E7E" },
+            "surface.control": { "colorSpace": "srgb", "components": [0.49411765, 0.49411765, 0.49411765], "alpha": 1, "hex": "#7E7E7E" },
+            "surface.raised": { "colorSpace": "srgb", "components": [0.52941176, 0.52941176, 0.52941176], "alpha": 1, "hex": "#878787" },
+            "surface.active": { "colorSpace": "srgb", "components": [0.57254902, 0.57254902, 0.57254902], "alpha": 1, "hex": "#929292" }
+          }
+        }
+      }
+    },
+    "status": {
+      "$value": { "colorSpace": "srgb", "components": [0.8, 0.76470588, 0.70196078], "alpha": 1, "hex": "#CCC3B3" },
+      "$description": "Ordinary body text paired with a functional-state marker."
+    },
+    "inverse": {
+      "$value": { "colorSpace": "srgb", "components": [0.03137255, 0.03137255, 0.03137255], "alpha": 1, "hex": "#080808" },
+      "$description": "Content shown on a light or strongly accented surface."
+    },
+    "label": {
+      "$value": { "colorSpace": "srgb", "components": [0.76078431, 0.72156863, 0.64313725], "alpha": 1, "hex": "#C2B8A4" },
+      "$description": "Human-readable label paired with a compact key or marker."
+    },
+    "navigation": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Navigable object or collection identity."
+    },
+    "marker": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Compact type, boundary, separator, or trailing marker."
+    },
+    "symbol": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Monochrome Unicode, Nerd Font, or equivalent semantic symbol."
+    }
+  },
+  "state": {
+    "$type": "color",
+    "success": {
+      "$value": { "colorSpace": "srgb", "components": [0.4627451, 0.66666667, 0.45490196], "alpha": 1, "hex": "#76AA74" },
+      "$description": "Successful or positive outcome."
+    },
+    "warning": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Warning or caution outcome."
+    },
+    "error": {
+      "$value": { "colorSpace": "srgb", "components": [0.80784314, 0.49019608, 0.36078431], "alpha": 1, "hex": "#CE7D5C" },
+      "$description": "Portable fallback for error, failure, or destructive outcome.",
+      "$extensions": {
+        "org.dark-academia-theme.adapterPreferences": {
+          "bySurface": {
+            "surface.working": { "colorSpace": "srgb", "components": [0.62745098, 0.41960784, 0.3372549], "alpha": 1, "hex": "#A06B56" },
+            "surface.secondary": { "colorSpace": "srgb", "components": [0.65490196, 0.44705882, 0.36078431], "alpha": 1, "hex": "#A7725C" },
+            "surface.rail": { "colorSpace": "srgb", "components": [0.65490196, 0.44705882, 0.36078431], "alpha": 1, "hex": "#A7725C" },
+            "surface.control": { "colorSpace": "srgb", "components": [0.65490196, 0.44705882, 0.36078431], "alpha": 1, "hex": "#A7725C" },
+            "surface.raised": { "colorSpace": "srgb", "components": [0.7372549, 0.4627451, 0.35294118], "alpha": 1, "hex": "#BC765A" },
+            "surface.active": { "colorSpace": "srgb", "components": [0.80784314, 0.49019608, 0.36078431], "alpha": 1, "hex": "#CE7D5C" }
+          }
+        }
+      }
+    },
+    "info": {
+      "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+      "$description": "Informational outcome."
+    },
+    "hint": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+      "$description": "Non-blocking suggestion or hint."
+    },
+    "active": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+      "$description": "Active application mode or operational status."
+    },
+    "diff": {
+      "added": { "$value": "{state.success}", "$description": "Added content." },
+      "changed": { "$value": "{state.warning}", "$description": "Changed content." },
+      "removed": { "$value": "{state.error}", "$description": "Removed content." }
+    },
+    "permission": {
+      "read": {
+        "$value": { "colorSpace": "srgb", "components": [0.76078431, 0.72156863, 0.64313725], "alpha": 1, "hex": "#C2B8A4" },
+        "$description": "Granted read permission."
+      },
+      "write": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Granted write permission."
+      },
+      "execute": {
+        "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+        "$description": "Granted execute permission."
+      },
+      "missing": {
+        "$value": { "colorSpace": "srgb", "components": [0.59215686, 0.59215686, 0.59215686], "alpha": 1, "hex": "#979797" },
+        "$description": "Missing permission position or separator."
+      }
+    }
+  },
+  "interaction": {
+    "$type": "color",
+    "navigation": {
+      "active": {
+        "$value": { "colorSpace": "srgb", "components": [0.16078431, 0.19607843, 0.16078431], "alpha": 1, "hex": "#293229" },
+        "$description": "Active item in a navigation or collection view."
+      }
+    },
+    "action": {
+      "marked": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Item marked for an explicit action."
+      }
+    },
+    "text": {
+      "selection": {
+        "$value": { "colorSpace": "srgb", "components": [0.32156863, 0.38039216, 0.28235294], "alpha": 1, "hex": "#526148" },
+        "$description": "Text-selection emphasis."
+      }
+    },
+    "search": {
+      "match": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Search-match emphasis."
+      },
+      "current": {
+        "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+        "$description": "Current match within a search result set."
+      }
+    },
+    "key": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Keyboard command or compact control key."
+    },
+    "cursor": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+      "$description": "Active text or terminal cursor."
+    }
+  },
+  "border": {
+    "$type": "color",
+    "window": {
+      "inactive": {
+        "$value": { "colorSpace": "srgb", "components": [0.22745098, 0.19215686, 0.11372549], "alpha": 1, "hex": "#3A311D" },
+        "$description": "Thin boundary for an inactive application window."
+      },
+      "active": {
+        "$value": { "colorSpace": "srgb", "components": [0.32941176, 0.28235294, 0.14509804], "alpha": 1, "hex": "#544825" },
+        "$description": "Thin boundary for the active application window."
+      }
+    },
+    "component": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.14509804, 0.17647059, 0.14509804], "alpha": 1, "hex": "#252D25" },
+        "$description": "Ordinary boundary inside an application."
+      },
+      "active": {
+        "$value": { "colorSpace": "srgb", "components": [0.32941176, 0.28235294, 0.14509804], "alpha": 1, "hex": "#544825" },
+        "$description": "Active or focused boundary inside an application."
+      }
+    }
+  },
+  "syntax": {
+    "$type": "color",
+    "comment": {
+      "$value": { "colorSpace": "srgb", "components": [0.48235294, 0.46666667, 0.44313725], "alpha": 1, "hex": "#7B7771" },
+      "$description": "Commentary and explanatory source annotations."
+    },
+    "keyword": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Structural language word."
+      },
+      "declaration": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Declaration keyword; fall back to syntax.keyword."
+      },
+      "control": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Control-flow keyword; fall back to syntax.keyword."
+      }
+    },
+    "directive": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Preprocessor or language directive; fall back to syntax.keyword."
+    },
+    "function": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+        "$description": "Callable identity."
+      },
+      "builtin": {
+        "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+        "$description": "Built-in function in the callable family; fall back to syntax.function."
+      },
+      "call": {
+        "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+        "$description": "Function call in the callable family; fall back to syntax.function."
+      }
+    },
+    "method": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.8745098, 0.59215686], "alpha": 1, "hex": "#EBDF97" },
+      "$description": "Method refining the callable role; fall back to syntax.function."
+    },
+    "variable": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.42745098, 0.50588235, 0.37254902], "alpha": 1, "hex": "#6D815F" },
+        "$description": "Primary data-bearing name."
+      },
+      "builtin": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Built-in language variable using structural brass; fall back to syntax.variable."
+      }
+    },
+    "parameter": {
+      "$value": { "colorSpace": "srgb", "components": [0.42745098, 0.50588235, 0.37254902], "alpha": 1, "hex": "#6D815F" },
+      "$description": "Parameter in the data-name family; fall back to syntax.variable."
+    },
+    "property": {
+      "$value": { "colorSpace": "srgb", "components": [0.50980392, 0.69411765, 0.50588235], "alpha": 1, "hex": "#82B181" },
+      "$description": "Property-like data member; fall back to syntax.variable."
+    },
+    "field": {
+      "$value": { "colorSpace": "srgb", "components": [0.50980392, 0.69411765, 0.50588235], "alpha": 1, "hex": "#82B181" },
+      "$description": "Field-like data member; fall back to syntax.property."
+    },
+    "string": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.89411765, 0.80392157], "alpha": 1, "hex": "#EBE4CD" },
+        "$description": "String value."
+      },
+      "escape": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Escape using structural brass inside a string; fall back to syntax.string."
+      },
+      "regex": {
+        "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+        "$description": "Regular expression using the type/schema family; fall back to syntax.string."
+      }
+    },
+    "character": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.89411765, 0.80392157], "alpha": 1, "hex": "#EBE4CD" },
+      "$description": "Character value."
+    },
+    "number": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.89411765, 0.80392157], "alpha": 1, "hex": "#EBE4CD" },
+      "$description": "Numeric value."
+    },
+    "float": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.89411765, 0.80392157], "alpha": 1, "hex": "#EBE4CD" },
+      "$description": "Floating-point numeric value."
+    },
+    "constant": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.89411765, 0.80392157], "alpha": 1, "hex": "#EBE4CD" },
+        "$description": "Ordinary constant value."
+      },
+      "builtin": {
+        "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+        "$description": "Built-in constant in the type/schema family; fall back to syntax.constant."
+      }
+    },
+    "boolean": {
+      "$value": { "colorSpace": "srgb", "components": [0.92156863, 0.89411765, 0.80392157], "alpha": 1, "hex": "#EBE4CD" },
+      "$description": "Boolean value."
+    },
+    "type": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+        "$description": "Type or schema identity."
+      },
+      "builtin": {
+        "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+        "$description": "Built-in type retaining the type family; fall back to syntax.type."
+      },
+      "qualifier": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Type qualifier behaving like a structural keyword; fall back to syntax.type."
+      }
+    },
+    "schema": {
+      "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+      "$description": "Schema identity distinct from a language type."
+    },
+    "constructor": {
+      "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+      "$description": "Constructor using the type/schema family; fall back to syntax.type."
+    },
+    "attribute": {
+      "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+      "$description": "Attribute using the type/schema family; fall back to syntax.type."
+    },
+    "namespace": {
+      "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+      "$description": "Namespace using the type/schema family; fall back to syntax.type."
+    },
+    "operator": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Operator connecting or transforming expressions."
+    },
+    "punctuation": {
+      "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+      "$description": "Structural delimiter or punctuation."
+    },
+    "tag": {
+      "$root": {
+        "$value": { "colorSpace": "srgb", "components": [0.50980392, 0.69411765, 0.50588235], "alpha": 1, "hex": "#82B181" },
+        "$description": "Tag name in the property-like data family; fall back to syntax.property."
+      },
+      "attribute": {
+        "$value": { "colorSpace": "srgb", "components": [0.79215686, 0.91372549, 0.69019608], "alpha": 1, "hex": "#CAE9B0" },
+        "$description": "Tag attribute using light green; fall back to syntax.attribute."
+      },
+      "delimiter": {
+        "$value": { "colorSpace": "srgb", "components": [0.72156863, 0.61176471, 0.36078431], "alpha": 1, "hex": "#B89C5C" },
+        "$description": "Tag delimiter using structural brass; fall back to syntax.punctuation."
+      }
+    }
+  },
+  "terminal": {
+    "ansi": {
+      "$type": "color",
+      "black": { "$value": "{surface.working}", "$description": "Normal black slot." },
+      "red": { "$value": "{state.error}", "$description": "Normal red slot." },
+      "green": { "$value": "{state.success}", "$description": "Normal green slot." },
+      "yellow": { "$value": "{state.warning}", "$description": "Normal yellow slot." },
+      "blue": { "$value": "{syntax.variable.$root}", "$description": "Normal blue compatibility slot using primary sage." },
+      "magenta": { "$value": "{content.secondary}", "$description": "Normal magenta compatibility slot using secondary parchment." },
+      "cyan": { "$value": "{content.status}", "$description": "Normal cyan compatibility slot using status content." },
+      "white": { "$value": "{content.primary}", "$description": "Normal white slot." },
+      "bright": {
+        "black": { "$value": "{content.muted}", "$description": "Bright black slot using muted gray." },
+        "red": { "$value": "{state.error}", "$description": "Bright red slot; intentionally repeats normal red." },
+        "green": { "$value": "{state.info}", "$description": "Bright green slot using pale information green." },
+        "yellow": { "$value": "{state.active}", "$description": "Bright yellow slot using active light gold." },
+        "blue": { "$value": "{syntax.property}", "$description": "Bright blue compatibility slot using property green." },
+        "magenta": { "$value": "{state.active}", "$description": "Bright magenta compatibility slot using active light gold." },
+        "cyan": { "$value": "{state.info}", "$description": "Bright cyan compatibility slot using pale information green." },
+        "white": { "$value": "{syntax.string.$root}", "$description": "Bright white slot using ordinary syntax-value parchment." }
+      }
+    }
+  }
+}
