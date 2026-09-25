@@ -14,7 +14,7 @@ case "$color" in
         color="#$color"
         ;;
     *)
-        printf 'Invalid sRGB color: %s\n' "$color" >&2
+        printf 'Invalid sRGB hexadecimal color: %s\n' "$color" >&2
         exit 65
         ;;
 esac
@@ -25,5 +25,5 @@ if ! command -v magick >/dev/null 2>&1; then
 fi
 
 magick "xc:$color" -colorspace HSL \
-    -format 'hsl(%[fx:round(360*u.r)], %[fx:round(100*u.g)]%%, %[fx:round(100*u.b)]%%)\n' \
+    -format 'hsl(%[fx:u.g==0?0:mod(round(360*u.r),360)], %[fx:round(100*u.g)]%%, %[fx:round(100*u.b)]%%)\n' \
     info:

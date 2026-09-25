@@ -118,13 +118,16 @@ independently sufficient cue identifies them.
 
 ## Color conversion
 
-[`../scripts/color-to-hsl.sh`](../scripts/color-to-hsl.sh) converts one exact
+[`../scripts/hex-to-hsl.sh`](../scripts/hex-to-hsl.sh) converts one exact
 six-digit sRGB value to rounded integer HSL:
 
 ```sh
-scripts/color-to-hsl.sh '#B89C5C'
+scripts/hex-to-hsl.sh '#B89C5C'
 ```
 
 The helper requires Bash and ImageMagick 7's `magick` executable on `PATH`. It
-uses ImageMagick's HSL conversion and rounds hue, saturation, and lightness to
-integers. It performs no network access and assumes a standard sRGB hex input.
+treats the input as CSS hexadecimal notation for sRGB and emits its CSS HSL
+representation. It rounds nonnegative hue, saturation, and lightness values to
+the nearest integer with half values rounded upward, normalizes hue to
+`[0, 360)`, and emits hue `0` for achromatic colors. It performs no network
+access.

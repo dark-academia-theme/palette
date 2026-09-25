@@ -1,8 +1,8 @@
 ---
 name: dark-academia-theme
-description: Apply the Dark Academia palette through semantic tokens, portable fallbacks, adapter preferences, terminal syntax guidance, or exact color-to-HSL conversion.
+description: Apply the Dark Academia palette through semantic tokens, portable fallbacks, adapter preferences, terminal syntax guidance, or exact hex-to-HSL conversion.
 license: MIT
-compatibility: The color-to-HSL helper requires Bash and ImageMagick 7 magick.
+compatibility: The hex-to-HSL helper requires Bash and ImageMagick 7 magick.
 ---
 
 # Dark Academia Theme
@@ -21,12 +21,11 @@ Durable source data may preserve exact hex.
 
 - **Semantic tokens** → [Token model and adapter guidance](references/semantic-tokens.md).
 - **Canonical source** → [DTCG 2025.10 tokens](references/semantic-tokens.tokens.json).
-- **HSL conversion** → [`color-to-hsl.sh`](scripts/color-to-hsl.sh).
-  Run it with one `RRGGBB` or `#RRGGBB` argument.
+- **Hex to HSL** → [`hex-to-hsl.sh`](scripts/hex-to-hsl.sh).
 
 ## Glossary
 
 **Semantic token**:
-A purpose-based color role whose meaning stays stable while adapters map it to
-application-specific theme keys and rendering channels.
+A purpose-based color role that names what a color communicates independently
+of the color currently assigned to it.
 _Avoid_: Naming a token after one application's widget or configuration key
